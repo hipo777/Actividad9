@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int idImagen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +24,36 @@ public class MainActivity extends AppCompatActivity {
         otono.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent secondActivity = new Intent(MainActivity.this, MainActivity2.class);
-                startActivity(secondActivity);
+                idImagen = R.drawable.otono;
+                irAsegundaActividad();
+            }
+        });
+        invierno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                idImagen = R.drawable.invierno;
+                irAsegundaActividad();
+            }
+        });
+        primavera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                idImagen = R.drawable.primavera;
+                irAsegundaActividad();
+            }
+        });
+        verano.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                idImagen = R.drawable.verano;
+                irAsegundaActividad();
             }
         });
 
+    }
+    public void irAsegundaActividad(){
+        Intent secondActivity = new Intent(MainActivity.this, MainActivity2.class);
+        secondActivity.putExtra("clave", idImagen);
+        startActivity(secondActivity);
     }
 }

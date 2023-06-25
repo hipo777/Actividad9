@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Actividad 9</string>
+    <string name="verano">Verano</string>
+    <string name="primavera">Primavera</string>
+    <string name="invierno">Invierno</string>
+    <string name="otono">Otoño</string>
 </resources>

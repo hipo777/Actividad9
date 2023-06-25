@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/otono" />
+         />
 
     <ImageView
         android:id="@+id/imageViewInvi"
